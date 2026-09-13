@@ -1,0 +1,59 @@
+/* ==========================================================================
+   فرصتك (Forsetak) — تعريفات الخطوط
+   المسار المتوقع لهذا الملف: /src/assets/fonts/fonts.css
+   ========================================================================== */
+
+/* Cairo — خط متغير (Variable Font) يغطي كل الأوزان من 200 إلى 1000
+   بيتظبط الوزن المطلوب عن طريق font-weight في الاستايل بتاعك، مش محتاج ملف منفصل لكل وزن */
+@font-face {
+  font-family: 'Cairo';
+  src: url('/src/assets/fonts/Cairo/Cairo-VariableFont_slnt,wght.ttf') format('truetype-variations'),
+       url('/src/assets/fonts/Cairo/Cairo-VariableFont_slnt,wght.ttf') format('truetype');
+  font-weight: 200 1000;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Poppins — ثابت الوزن (Static), محتاج ملف منفصل لكل وزن */
+@font-face {
+  font-family: 'Poppins';
+  src: url('/src/assets/fonts/Poppins/Poppins-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('/src/assets/fonts/Poppins/Poppins-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('/src/assets/fonts/Poppins/Poppins-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ==========================================================================
+   متغيرات جاهزة للاستخدام في باقي ملفات CSS
+   ========================================================================== */
+:root {
+  --font-ar: 'Cairo', 'Tajawal', sans-serif;
+  --font-en: 'Poppins', Arial, sans-serif;
+}
+
+/* أمثلة استخدام سريعة (اختياري - احذفها لو مش محتاجها) */
+/*
+h1, h2, h3, .heading-ar { font-family: var(--font-ar); font-weight: 700; }
+.subheading-ar, button   { font-family: var(--font-ar); font-weight: 600; }
+p, body                  { font-family: var(--font-ar); font-weight: 400; }
+
+.brand-en, .price        { font-family: var(--font-en); font-weight: 700; }
+.button-en               { font-family: var(--font-en); font-weight: 500; }
+.text-en                 { font-family: var(--font-en); font-weight: 400; }
+*/
