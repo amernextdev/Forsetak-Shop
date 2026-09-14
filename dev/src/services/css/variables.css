@@ -1,0 +1,226 @@
+/* ═══════════════════════════════════════════════════
+   variables.css — فرصتك (Forsetak)
+   Design Tokens — Single source of truth
+   كل قيمة في الموقع بتيجي من هنا
+═══════════════════════════════════════════════════ */
+
+/* ───────────────────────────────────────
+   TYPOGRAPHY — عربي فقط (لغة الموقع الوحيدة)
+─────────────────────────────────────── */
+:root {
+  /* Font Families */
+  --font-primary:   'Cairo', 'Tajawal', sans-serif;
+  --font-secondary: 'Cairo', 'Tajawal', sans-serif;
+
+  /* خط ثانوي مستقل — للأرقام والأسعار واسم البراند بالإنجليزي "Forsetak"
+     ملحوظ: مش مرتبط بلغة الصفحة، الموقع عربي بالكامل وده استخدام محدود فقط */
+  --font-numeric:   'Poppins', Arial, sans-serif;
+
+  /* Font Weights */
+  --fw-light:         300;
+  --fw-regular:       400;
+  --fw-medium:        500;
+  --fw-semibold:      600;
+  --fw-bold:          700;
+  --fw-extrabold:     700;
+
+  /* Font Sizes — Fluid Scale */
+  --fs-xs:            0.75rem;    /* 12px */
+  --fs-sm:            0.875rem;   /* 14px */
+  --fs-base:          1rem;       /* 16px */
+  --fs-md:            1.125rem;   /* 18px */
+  --fs-lg:            1.25rem;    /* 20px */
+  --fs-xl:            1.5rem;     /* 24px */
+  --fs-2xl:           1.875rem;   /* 30px */
+  --fs-3xl:           2.25rem;    /* 36px */
+  --fs-4xl:           3rem;       /* 48px */
+  --fs-5xl:           3.75rem;    /* 60px */
+  --fs-6xl:           4.5rem;     /* 72px */
+
+  /* Line Heights */
+  --lh-tight:         1.15;
+  --lh-snug:          1.35;
+  --lh-normal:        1.6;
+  --lh-relaxed:       1.75;
+  --lh-loose:         2;
+
+  /* Letter Spacing */
+  --ls-tighter:       -0.03em;
+  --ls-tight:         -0.01em;
+  --ls-normal:        0em;
+  --ls-wide:          0.04em;
+  --ls-wider:         0.08em;
+  --ls-widest:        0.12em;
+
+  /* Text Direction */
+  --dir:              rtl;
+  --text-align:       right;
+}
+
+/* ───────────────────────────────────────
+   COLORS — Light Mode (Default)
+   ⚠️ الهوية البصرية لفرصتك مبنية على خلفية فاتحة وودودة —
+   ممنوع أي تحويل لوضع داكن افتراضي، لأن ده بيقرب من إحساس "بريميوم"
+   مش مناسب لطبيعة المنتجات والتسعير المستهدف
+─────────────────────────────────────── */
+:root {
+  /* Backgrounds */
+  --color-bg:               #FFFDF8;
+  --color-bg-secondary:     #FFF8F0;
+  --color-surface:          #FFFFFF;
+  --color-surface-2:        #F4F1E9;
+  --color-surface-3:        #EDE8DB;
+
+  /* Borders */
+  --color-border:           #E5E0D5;
+  --color-border-subtle:    #F0ECE1;
+  --color-border-strong:    #C4BEAE;
+
+  /* Text */
+  --color-text-heading:     #2C2A26;
+  --color-text-body:        #5C5850;
+  --color-text-muted:       #8A8578;
+  --color-text-disabled:    #C4BEAE;
+  --color-text-inverse:     #FFFDF8;
+
+  /* ───────────────────────────────────────
+     COLORS — Primary Palette (برتقالي — كل الدرجات)
+  ─────────────────────────────────────── */
+
+  /* Core */
+  --color-primary-50:       #FDF3ED;
+  --color-primary-100:      #FCE4D4;
+  --color-primary-200:      #F8C7A8;
+  --color-primary-300:      #F3A470;
+  --color-primary-400:      #ED7F42;
+  --color-primary-500:      #E8632F;   /* ← Main Accent (Light) */
+  --color-primary-600:      #C94E1E;
+  --color-primary-700:      #A23D17;
+  --color-primary-800:      #7A2E11;
+  --color-primary-900:      #4A1B0C;
+  --color-primary-950:      #2E1007;
+
+  /* Semantic Primary — Light */
+  --color-accent:           var(--color-primary-500);
+  --color-accent-hover:     var(--color-primary-400);
+  --color-accent-active:    var(--color-primary-600);
+  --color-accent-subtle:    var(--color-primary-100);
+
+  /* Primary Transparencies — Light */
+  --color-primary-glow:       rgba(232, 99, 47, 0.16);
+  --color-primary-glow-sm:    rgba(232, 99, 47, 0.08);
+  --color-primary-glow-lg:    rgba(232, 99, 47, 0.28);
+  --color-primary-border:     rgba(232, 99, 47, 0.25);
+  --color-primary-surface:    rgba(232, 99, 47, 0.06);
+  --color-primary-surface-2:  rgba(232, 99, 47, 0.12);
+
+  /* ───────────────────────────────────────
+     COLORS — Secondary Palette (أخضر — كل الدرجات)
+  ─────────────────────────────────────── */
+
+  --color-secondary-50:     #E9F7F0;
+  --color-secondary-100:    #C7EDDC;
+  --color-secondary-200:    #9FE1CB;
+  --color-secondary-300:    #6ED2AE;
+  --color-secondary-400:    #3ABE8C;
+  --color-secondary-500:    #1D9E75;   /* ← Main Secondary */
+  --color-secondary-600:    #167F5D;
+  --color-secondary-700:    #106249;
+  --color-secondary-800:    #0A4636;
+  --color-secondary-900:    #052D22;
+  --color-secondary-950:    #021712;
+
+  --color-secondary-surface: rgba(29, 158, 117, 0.08);
+  --color-secondary-border:  rgba(29, 158, 117, 0.2);
+
+  /* ───────────────────────────────────────
+     COLORS — Semantic States
+  ─────────────────────────────────────── */
+  --color-success:          #1D9E75;
+  --color-success-surface:  rgba(29, 158, 117, 0.08);
+  --color-success-border:   rgba(29, 158, 117, 0.2);
+
+  --color-error:            #D14343;
+  --color-error-surface:    rgba(209, 67, 67, 0.08);
+  --color-error-border:     rgba(209, 67, 67, 0.2);
+
+  --color-warning:          #E0A020;
+  --color-warning-surface:  rgba(224, 160, 32, 0.08);
+  --color-warning-border:   rgba(224, 160, 32, 0.2);
+
+  --color-info:             #378ADD;
+  --color-info-surface:     rgba(55, 138, 221, 0.08);
+  --color-info-border:      rgba(55, 138, 221, 0.2);
+
+  /* ───────────────────────────────────────
+     SHADOWS — Light
+  ─────────────────────────────────────── */
+  --shadow-sm:      0 1px 3px rgba(44, 42, 38, 0.06);
+  --shadow-md:      0 4px 16px rgba(44, 42, 38, 0.08);
+  --shadow-lg:      0 8px 32px rgba(44, 42, 38, 0.10);
+  --shadow-xl:      0 16px 64px rgba(44, 42, 38, 0.14);
+
+  /* Primary Glow Shadows (للأزرار والعناصر التفاعلية) */
+  --shadow-primary-sm:  0 0 12px var(--color-primary-glow-sm);
+  --shadow-primary-md:  0 0 24px var(--color-primary-glow);
+  --shadow-primary-lg:  0 0 48px var(--color-primary-glow-lg);
+
+  /* ───────────────────────────────────────
+     SPACING SCALE
+  ─────────────────────────────────────── */
+  --space-1:    0.25rem;   /* 4px  */
+  --space-2:    0.5rem;    /* 8px  */
+  --space-3:    0.75rem;   /* 12px */
+  --space-4:    1rem;      /* 16px */
+  --space-5:    1.25rem;   /* 20px */
+  --space-6:    1.5rem;    /* 24px */
+  --space-8:    2rem;      /* 32px */
+  --space-10:   2.5rem;    /* 40px */
+  --space-12:   3rem;      /* 48px */
+  --space-16:   4rem;      /* 64px */
+  --space-20:   5rem;      /* 80px */
+  --space-24:   6rem;      /* 96px */
+  --space-32:   8rem;      /* 128px */
+
+  /* ───────────────────────────────────────
+     BORDER RADIUS
+  ─────────────────────────────────────── */
+  --radius-sm:      4px;
+  --radius-md:      8px;
+  --radius-lg:      12px;
+  --radius-xl:      16px;
+  --radius-2xl:     24px;
+  --radius-full:    9999px;
+
+  /* ───────────────────────────────────────
+     TRANSITIONS
+  ─────────────────────────────────────── */
+  --transition-fast:    150ms ease;
+  --transition-base:    250ms ease;
+  --transition-slow:    400ms ease;
+  --transition-slower:  600ms ease;
+
+  /* ───────────────────────────────────────
+     Z-INDEX SCALE
+  ─────────────────────────────────────── */
+  --z-base:       0;
+  --z-raised:     10;
+  --z-dropdown:   100;
+  --z-sticky:     200;
+  --z-overlay:    300;
+  --z-modal:      400;
+  --z-toast:      500;
+  --z-tooltip:    600;
+
+  /* ───────────────────────────────────────
+     LAYOUT
+  ─────────────────────────────────────── */
+  --container-sm:     640px;
+  --container-md:     768px;
+  --container-lg:     1024px;
+  --container-xl:     1280px;
+  --container-2xl:    1440px;
+
+  --nav-height:       64px;
+  --section-padding:  var(--space-24);
+}
